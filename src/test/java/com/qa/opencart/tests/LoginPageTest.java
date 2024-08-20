@@ -1,14 +1,11 @@
 package com.qa.opencart.tests;
 
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstants;
 import com.qa.opencart.errors.AppError;
-import com.qa.opencart.listeners.ExtentReportListener;
-import com.qa.opencart.listeners.TestAllureListener;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -25,10 +22,10 @@ import io.qameta.allure.Story;
 public class LoginPageTest extends BaseTest{
 
 	//positive test case 
-	@Description("checking login page title-----")
+	@Description("checking login page title test-----")
 	@Severity(SeverityLevel.MINOR)
 	@Owner("Shivani")
-	@Issue("Login-123")//bug id number
+	@Issue("Login-1234")//bug id number
 	@Feature("login page title features")
 	
 	
