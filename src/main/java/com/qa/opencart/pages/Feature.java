@@ -1,6 +1,6 @@
 package com.qa.opencart.pages;
 
-public class feature {
+public class Feature {
 
 	String s = "feature";
 }
