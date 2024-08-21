@@ -9,8 +9,9 @@ public class Login {
 		System.out.println("main -- naveen");
 	}
 	public void doLogin() {
-		System.out.println("Jai - login");
-		String un = "admin";
+		System.out.println("naveen - login");
+		
+		
 		
 	}
 }
