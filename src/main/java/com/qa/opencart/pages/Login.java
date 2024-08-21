@@ -8,4 +8,9 @@ public class Login {
 	public void main() {
 		System.out.println("main -- naveen");
 	}
+	public void doLogin() {
+		System.out.println("naveen - login");
+		String un = "admin";
+		
+	}
 }
