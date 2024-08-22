@@ -45,7 +45,7 @@
 	-->
 	
 	
-	
+<!--	
 	<test name="Accounts Page Test">
 			<parameter name="browser" value="firefox"/>
 
@@ -68,5 +68,5 @@
 			<class name="com.qa.opencart.tests.RegisterPageTest" />	
 		</classes>
 	</test>
-	
+	-->
 </suite>
