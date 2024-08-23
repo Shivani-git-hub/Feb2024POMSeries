@@ -17,6 +17,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 @Epic("Epic 100: Design open cart application with shopping workflow")
 @Story("US 101: Design login page for open cart application")@Owner("Shivani")
+@Feature("F50: Feature ogin page")
 
 //@Listeners({ExtentReportListener.class, TestAllureListener.class})
 public class LoginPageTest extends BaseTest{
@@ -26,9 +27,6 @@ public class LoginPageTest extends BaseTest{
 	@Severity(SeverityLevel.MINOR)
 	@Owner("Shivani")
 	@Issue("Login-1234")//bug id number
-	@Feature("login page title features")
-	
-	
 	@Test(priority = 1)
 	public void loginPageTitleTest() {
 		String actTitle= loginPage.getLoginPageTitle();
@@ -39,8 +37,6 @@ public class LoginPageTest extends BaseTest{
 	@Description("checking login page url-----")
 	@Severity(SeverityLevel.NORMAL)
 	@Test(priority = 2)
-	@Feature("login page url features")
-
 	public void loginPageURLTest() {
 		String actURL= loginPage.getLoginPageURL();
 		Assert.assertTrue(actURL.contains(AppConstants.LOGIN_PAGE_FRACTION_URL), AppError.URL_NOT_FOUND);
@@ -50,8 +46,6 @@ public class LoginPageTest extends BaseTest{
 	@Description("checking forgot pwd link exit on the login page-----")
 	@Severity(SeverityLevel.CRITICAL)
 	@Test(priority = 3)
-	@Feature("login page forgot pwd features")
-
 	public void ForgotPwdLinkExistTest() {
 		Assert.assertTrue(loginPage.checkForgotPwdLinkExist(), AppError.ELEMENT_NOT_FOUND);
 		
@@ -60,7 +54,6 @@ public class LoginPageTest extends BaseTest{
 	@Description("checking user is able to login successfully-----")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test(priority = 4)
-	@Feature("login page  features")
 
 	public void loginTest() {
 		accPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));

@@ -16,7 +16,6 @@ import com.qa.opencart.pages.ProductInfoPage;
 import com.qa.opencart.pages.RegisterPage;
 import com.qa.opencart.pages.SearchResultsPage;
 
-import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 
 public class BaseTest {
@@ -31,7 +30,6 @@ public class BaseTest {
 	protected RegisterPage regPage;
 	protected SoftAssert softAssert;
 
-	@Description("intializing the browser..")
 	@Step("setup for the test, initializing browser : {0}")
 	@Parameters({"browser"})
 	@BeforeTest
@@ -47,7 +45,6 @@ public class BaseTest {
 		softAssert = new SoftAssert();
 	}
 	
-	@Description("closing the browser..")
 	@Step("close browser...")
 	@AfterTest
 	public void tearDown() {

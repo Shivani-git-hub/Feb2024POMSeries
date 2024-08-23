@@ -1,7 +1,5 @@
 package com.qa.opencart.factory;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -30,6 +28,10 @@ public class OptionsManager {
 		if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
 			co.addArguments("--incognito");
 		}
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setCapability("browserName", "chrome");
+			//co.setCapability("enableVNC", true);
+		}
 
 //		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 //			co.setCapability("browserName", "chrome");
@@ -54,6 +56,12 @@ public class OptionsManager {
 		if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
 			fo.addArguments("--incognito");
 		}
+		
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			fo.setCapability("browserName", "firefox");
+			//fo.setCapability("enableVNC", true);
+		}
+
 //		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 //			fo.setCapability("browserName", "firefox");
 //			fo.setBrowserVersion(prop.getProperty("browserversion").trim());
@@ -78,10 +86,10 @@ public class OptionsManager {
 			eo.addArguments("--inPrivate");
 		}
 
-//		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
-//			eo.setCapability("browserName", "edge");
-//			// eo.setCapability("enableVNC", true);
-//		}
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			eo.setCapability("browserName", "edge");
+		    //eo.setCapability("enableVNC", true);
+		}
 
 		return eo;
 	}
